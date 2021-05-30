@@ -8,3 +8,9 @@ Instructions for developers:
 
 Note: Please only add the code after you've checked the same on your mobile.
 
+
+To run the app on your phone:
+
+1.run 'npm install'
+2.cd ios && pod install (for ios)
+3.Follow the steps here after https://reactnative.dev/docs/running-on-device 
