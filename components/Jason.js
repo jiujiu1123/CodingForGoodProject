@@ -1,3 +1,4 @@
+/**
 import React from 'react';
 import {
     SafeAreaView,
@@ -15,12 +16,13 @@ import { Header,Button } from 'react-native-elements';
 export default function Jason(){
     return <Text>"ROCKET LAUNCH..."</Text>
 }
-/**
+*/
+/*
  * Instructions : 
  * 1.Comment everything above this and uncomment everything below this header.
  * 2. Add your code's folder to the js folder [For example, the code I developed is under the name "contact" in js folder]
  * 3. Change the require filepath in the arScenes variable to your folder's path
- 
+ */
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -36,7 +38,7 @@ import {
 
 
 var arScenes = {
-  'Contact' : require('../js/Contact/Contact.js'),
+  'Rocket' : require('../js/Rocket/RocketScene.js'),
 }
 
 
@@ -46,7 +48,7 @@ export default class Jason extends Component {
     super();
 
     this.state = {
-      ar: arScenes['Contact']
+      ar: arScenes['Rocket']
     }
 
     this._getARNavigator = this._getARNavigator.bind(this);
@@ -121,4 +123,4 @@ var localStyles = StyleSheet.create({
 });
 
 module.exports = Jason
- */
+ 
