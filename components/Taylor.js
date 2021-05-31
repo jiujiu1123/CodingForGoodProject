@@ -1,22 +1,22 @@
-import React from 'react';
-import {
-    SafeAreaView,
-    ScrollView,
-    StatusBar,
-    StyleSheet,
-    Text,
-    useColorScheme,
-    View,
-    Image,
-    TouchableOpacity
-  } from 'react-native';
-import { Header,Button } from 'react-native-elements';
+// import React from 'react';
+// import {
+//     SafeAreaView,
+//     ScrollView,
+//     StatusBar,
+//     StyleSheet,
+//     Text,
+//     useColorScheme,
+//     View,
+//     Image,
+//     TouchableOpacity
+//   } from 'react-native';
+// import { Header,Button } from 'react-native-elements';
   
-export default function Taylor(){
-    return <Text>"Portal..."</Text>
-}
+// export default function Taylor(){
+//     return <Text>"Portal..."</Text>
+// }
 
-/**
+*
  * Instructions : 
  * 1.Comment everything above this and uncomment everything below this header.
  * 2. Add your code's folder to the js folder [For example, the code I developed is under the name "contact" in js folder]
@@ -37,7 +37,7 @@ import {
 
 
 var arScenes = {
-  'Contact' : require('../js/Contact/Contact.js'),
+  'Contact' : require('../js/Portal/MainScene.js'),
 }
 
 
@@ -122,4 +122,3 @@ var localStyles = StyleSheet.create({
 });
 
 module.exports = Taylor
- */
