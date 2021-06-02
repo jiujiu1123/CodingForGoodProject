@@ -1,25 +1,20 @@
-import React from 'react';
-import {
-    SafeAreaView,
-    ScrollView,
-    StatusBar,
-    StyleSheet,
-    Text,
-    useColorScheme,
-    View,
-    Image,
-    TouchableOpacity
-  } from 'react-native';
-import { Header,Button } from 'react-native-elements';
+// import React from 'react';
+// import {
+//     SafeAreaView,
+//     ScrollView,
+//     StatusBar,
+//     StyleSheet,
+//     Text,
+//     useColorScheme,
+//     View,
+//     Image,
+//     TouchableOpacity
+//   } from 'react-native';
+// import { Header,Button } from 'react-native-elements';
   
-export default function Yash(){
-    return <Text>"Bubble Burst Game..."</Text>
-}
-/**
- * Instructions : 
- * 1.Comment everything above this and uncomment everything below this header.
- * 2. Add your code's folder to the js folder [For example, the code I developed is under the name "contact" in js folder]
- * 3. Change the require filepath in the arScenes variable to your folder's path
+// export default function Yash(){
+//     return <Text>"Bubble Burst Game..."</Text>
+// }
  
 import React, { Component } from 'react';
 import {
@@ -36,7 +31,7 @@ import {
 
 
 var arScenes = {
-  'Contact' : require('../js/Contact/Contact.js'),
+  'Bubbles' : require('../js/Bubbles/Bubbles.js'),
 }
 
 
@@ -46,7 +41,7 @@ export default class Yash extends Component {
     super();
 
     this.state = {
-      ar: arScenes['Contact']
+      ar: arScenes['Bubbles']
     }
 
     this._getARNavigator = this._getARNavigator.bind(this);
@@ -121,4 +116,3 @@ var localStyles = StyleSheet.create({
 });
 
 module.exports = Yash
- */
