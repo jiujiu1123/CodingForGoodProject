@@ -3,7 +3,7 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'CodeYourChancesApp' do
+target 'ARAppCYCDemo' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
@@ -11,7 +11,7 @@ target 'CodeYourChancesApp' do
   pod 'ViroReact', :path => '../node_modules/@viro-community/react-viro/ios/'
   pod 'ViroKit_static_lib', :path => '../node_modules/@viro-community/react-viro/ios/dist/ViroRenderer/static_lib'
 
-  target 'CodeYourChancesAppTests' do
+  target 'ARAppCYCDemoTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -26,11 +26,12 @@ target 'CodeYourChancesApp' do
   end
 end
 
-target 'CodeYourChancesApp-tvOS' do
-  # Pods for CodeYourChancesApp-tvOS
+target 'ARAppCYCDemo-tvOS' do
+  # Pods for ARAppCYCDemo-tvOS
 
-  target 'CodeYourChancesApp-tvOSTests' do
+  target 'ARAppCYCDemo-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
 end
+

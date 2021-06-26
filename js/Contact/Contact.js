@@ -28,77 +28,72 @@ import {
 var list=[
   {
     name:"Dominique Roberts",
-    email:"dominique@codeyourchances.com",
-    image:require("./res/Dominique_Roberts.webp"),
+    image:require("./res/team/Dominique.webp"),
     animation:'animateImage'
   },
   {
     name:"Gabrielle Roberts",
-    email:"ella@codeyourchances.com",
-    image:require("./res/image2.webp"),
+    image:require("./res/team/Gabrielle.webp"),
     animation:'animateImage2'
   },
   {
     name:"Andrew Spatafora",
-    email:"andrew@codyourchances.com",
-    image:require("./res/image3.webp"),
+    image:require("./res/team/Andrew.webp"),
     animation:'animateImage3'
   },
   {
     name:"Chelsea Celistan",
-    email:"chelsea@codeyourchances.com",
-    image:require("./res/image4.webp"),
+    image:require("./res/team/Chelsea.webp"),
     animation:'animateImage4'
   },
   {
     name:"Madhavi Ramakrishnan",
-    email:"madhavi@codeyourchances.com",
-    image:require("./res/image5.webp"),
+    image:require("./res/team/Dominique.webp"),
     animation:'animateImage5'
   },
   {
     name:"Nimisha Sara Philip",
-    image:require("./res/image6.webp"),
+    image:require("./res/team/Madhavi.webp"),
     animation:'animateImage6'
   },
   {
     name:"Peter Zhong",
-    image:require("./res/image7.webp"),
+    image:require("./res/team/Peter.webp"),
     animation:'animateImage7'
   },
   {
     name:"Carina Ramos",
-    image:require("./res/image8.webp"),
+    image:require("./res/team/Carina.webp"),
     animation:'animateImage8'
   },
   {
     name:"Alberta Yoo",
-    image:require("./res/image9.webp"),
+    image:require("./res/team/Alberta.webp"),
     animation:'animateImage9'
   },
   {
     name:"Chetan Popli",
-    image:require("./res/image10.webp"),
+    image:require("./res/team/Chetan.webp"),
     animation:'animateImage10'
   },
   {
     name:"Ashvika Venkatesan",
-    image:require("./res/image11.webp"),
+    image:require("./res/team/Ashvika.webp"),
     animation:'animateImage11'
   },
   {
     name:"Afreen Akthar",
-    image:require("./res/image12.webp"),
+    image:require("./res/team/Afreen.webp"),
     animation:'animateImage12'
   },
   {
     name:"Braden Kobeski",
-    image:require("./res/image13.webp"),
+    image:require("./res/team/Braden.webp"),
     animation:'animateImage13'
   },
   {
-    name:" Parmis Mokhtari-Dizaji",
-    image:require("./res/image14.webp"),
+    name:"Parmis Mokhtari-Dizaji",
+    image:require("./res/team/Parmis.webp"),
     animation:'animateImage14'
   }
 ]
@@ -138,22 +133,7 @@ function Card(props){
       onTouch={() => alert("twitter")}
       style={styles.subText}
     >
-     {props.item.email&& <ViroText
-        width={0.01}
-        height={0.01}
-        textAlign="left"
-        textClipMode="None"
-        text={props.item.email}
-        scale={[.01, .01, .01]}
-        style={styles.textStyle}
-        
-      />}
-      <ViroAnimatedImage
-        height={0.01}
-        width={0.01}
-        loop={true}
-        source={require('./res/mail.gif')}
-      />
+ 
     </ViroFlexView>
   </ViroFlexView>
 </ViroNode>
@@ -193,7 +173,7 @@ export class Contact extends Component {
 
             <ViroText rotation={[-90, 0, 0]} text={"Meet the Code Your Chances Team"} scale={[.5, .8, .5]} extrusionDepth={5} width={20} color={"#000000"} position={[0, -4, -2]} style={styles.helloWorldTextStyle} />
 
-            { list.map((e,i)=><Card runAnimation={this.state.runAnimation} i={i} item={list[i]}/>)}
+            { list.map((e,i)=><Card runAnimation={this.state.runAnimation} i={i} key={e.name} item={list[i]}/>)}
             </>
             }
             

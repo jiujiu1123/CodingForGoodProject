@@ -16,7 +16,7 @@ import {
   ViroARPlaneSelector,
   ViroNode,
   ViroAnimations,
-} from 'react-viro';
+} from '@viro-community/react-viro';
 
 export default class HelloWorldSceneAR extends Component {
   constructor() {

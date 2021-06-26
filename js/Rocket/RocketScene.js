@@ -14,7 +14,7 @@ import {
   ViroAmbientLight,
   ViroParticleEmitter,
   ViroNode
-} from 'react-viro';
+} from '@viro-community/react-viro';
 
 export default class RocketScene extends Component {
 

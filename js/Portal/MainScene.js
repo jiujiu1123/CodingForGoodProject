@@ -15,7 +15,7 @@ import {
   ViroPortal,
   ViroPortalScene,
   Viro3DObject,
-} from 'react-viro';
+} from '@viro-community/react-viro';
 
 var createReactClass = require('create-react-class');
 var MainScene = createReactClass({
@@ -26,17 +26,17 @@ var MainScene = createReactClass({
       <ViroAmbientLight color="#ffffff" intensity={200}/>
         <ViroPortalScene passable={true} dragType="FixedDistance" onDrag={()=>{}}>
           <ViroPortal position={[0, 0, -1]} scale={[.1, .1, .1]}>
-            <Viro3DObject source={require('../../js/res/portals/portal_wood_frame.vrx')}
+            <Viro3DObject source={require('./res/portals/portal_wood_frame.vrx')}
               resources={[
-                require('../../js/res/portals/portal_wood_frame_diffuse.png'),
-                require('../../js/res/portals/portal_wood_frame_normal.png'),
-                require('../../js/res/portals/portal_wood_frame_specular.png'),
+                require('./res/portals/portal_wood_frame_diffuse.png'),
+                require('./res/portals/portal_wood_frame_normal.png'),
+                require('./res/portals/portal_wood_frame_specular.png'),
               ]}
               type="VRX"
             />
           </ViroPortal>
           {/* <Viro360Image source={require('../../js/res/building.jpg')} /> */}
-          <Viro360Video source={require("../../js/res/360_surf.mp4")} onFinish={this._onFinish}
+          <Viro360Video source={require("./res/360_surf.mp4")} onFinish={this._onFinish}
     onUpdateTime={this._onUpdateTime}
     onError={this._videoError}
     loop={true}
