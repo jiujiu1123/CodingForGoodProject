@@ -33,17 +33,17 @@ var list=[
   },
   {
     name:"Gabrielle Roberts",
-    image:require("./res/team/Dominique.webp"),
+    image:require("./res/team/Gabrielle.webp"),
     animation:'animateImage2'
   },
   {
     name:"Andrew Spatafora",
-    image:require("./res/team/Dominique.webp"),
+    image:require("./res/team/Andrew.webp"),
     animation:'animateImage3'
   },
   {
     name:"Chelsea Celistan",
-    image:require("./res/team/Dominique.webp"),
+    image:require("./res/team/Chelsea.webp"),
     animation:'animateImage4'
   },
   {
@@ -53,47 +53,47 @@ var list=[
   },
   {
     name:"Nimisha Sara Philip",
-    image:require("./res/team/Dominique.webp"),
+    image:require("./res/team/Madhavi.webp"),
     animation:'animateImage6'
   },
   {
     name:"Peter Zhong",
-    image:require("./res/team/Dominique.webp"),
+    image:require("./res/team/Peter.webp"),
     animation:'animateImage7'
   },
   {
     name:"Carina Ramos",
-    image:require("./res/team/Dominique.webp"),
+    image:require("./res/team/Carina.webp"),
     animation:'animateImage8'
   },
   {
     name:"Alberta Yoo",
-    image:require("./res/team/Dominique.webp"),
+    image:require("./res/team/Alberta.webp"),
     animation:'animateImage9'
   },
   {
     name:"Chetan Popli",
-    image:require("./res/team/Dominique.webp"),
+    image:require("./res/team/Chetan.webp"),
     animation:'animateImage10'
   },
   {
     name:"Ashvika Venkatesan",
-    image:require("./res/team/Dominique.webp"),
+    image:require("./res/team/Ashvika.webp"),
     animation:'animateImage11'
   },
   {
     name:"Afreen Akthar",
-    image:require("./res/team/Dominique.webp"),
+    image:require("./res/team/Afreen.webp"),
     animation:'animateImage12'
   },
   {
     name:"Braden Kobeski",
-    image:require("./res/team/Dominique.webp"),
+    image:require("./res/team/Braden.webp"),
     animation:'animateImage13'
   },
   {
-    name:" Parmis Mokhtari-Dizaji",
-    image:require("./res/team/Dominique.webp"),
+    name:"Parmis Mokhtari-Dizaji",
+    image:require("./res/team/Parmis.webp"),
     animation:'animateImage14'
   }
 ]
@@ -173,7 +173,7 @@ export class Contact extends Component {
 
             <ViroText rotation={[-90, 0, 0]} text={"Meet the Code Your Chances Team"} scale={[.5, .8, .5]} extrusionDepth={5} width={20} color={"#000000"} position={[0, -4, -2]} style={styles.helloWorldTextStyle} />
 
-            { list.map((e,i)=><Card runAnimation={this.state.runAnimation} i={i} item={list[i]}/>)}
+            { list.map((e,i)=><Card runAnimation={this.state.runAnimation} i={i} key={e.name} item={list[i]}/>)}
             </>
             }
             
@@ -255,7 +255,7 @@ helloWorldTextStyle: {
 
 ViroARTrackingTargets.createTargets({
   "businessCard" : {
-    source : require('./res/prof.jpg'),
+    source : require('./res/cyc.png'),
     orientation : "Up",
     physicalWidth : 0.05 // real world width in meters
   }
