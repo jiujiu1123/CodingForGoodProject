@@ -24,23 +24,32 @@ export default class HelloWorldSceneAR extends Component {
 
     // Set initial state here
     this.state = {
-      text : "Initializing AR...",
-      scale1: [0.1, 0.1, 0.1],
+      counter: 0,
+      textScale = [0, 0, 0],
+      scale1: [0.11, 0.11, 0.11],
       scale2: [0.1, 0.1, 0.1],
       scale3: [0.1, 0.1, 0.1],
       scale4: [0.1, 0.1, 0.1],
       scale5: [0.1, 0.1, 0.1],
       scale6: [0.1, 0.1, 0.1],
-      scale7: [0.1, 0.1, 0.1],
+      scale7: [0.12, 0.12, 0.12],
       scale8: [0.1, 0.1, 0.1],
       scale9: [0.1, 0.1, 0.1],
       scale10: [0.1, 0.1, 0.1],
-      scale11: [0.1, 0.1, 0.1],
+      scale11: [0.13, 0.13, 0.13],
       scale12: [0.1, 0.1, 0.1],
       scale13: [0.1, 0.1, 0.1],
       scale14: [0.1, 0.1, 0.1],
       scale15: [0.1, 0.1, 0.1],
-      scale16: [0.1, 0.1, 0.1],
+      scale16: [0.14, 0.14, 0.14],
+      scale17: [0.1, 0.1, 0.1],
+      scale18: [0.12, 0.12, 0.12],
+      scale19: [0.1, 0.1, 0.1],
+      scale20: [0.11, 0.11, 0.11],
+      scale21: [0.1, 0.1, 0.1],
+      scale22: [0.13, 0.13, 0.13],
+      scale23: [0.1, 0.1, 0.1],
+      scale24: [0.14, 0.14, 0.14],
     };
 
     // bind 'this' to functions
@@ -58,6 +67,7 @@ export default class HelloWorldSceneAR extends Component {
         <ViroAmbientLight color={"#aaaaaa"} />
         <ViroSpotLight innerAngle={5} outerAngle={90} direction={[0,-1,-.2]}
           position={[0, 3, 1]} color="#ffffff" castsShadow={true} />
+        <ViroText style={styles.helloWorldTextStyle} text="Congratulations!" scale={this.state.textScale}/>
         <ViroNode position={[0,-1,0]}>
           <Viro3DObject
             source={require('./res/emoji_smile/emoji_smile.vrx')}
@@ -68,8 +78,9 @@ export default class HelloWorldSceneAR extends Component {
             scale={this.state.scale1}
             type="VRX"
             onClick={() => this.setState({
-              scale1: [0, 0, 0]
-            })}
+              scale1: [0, 0, 0],
+              counter: counter + 1
+            }), _checkCounter()}
             animation={{name: "anim1", run: true, loop: true}} />
         </ViroNode>
 
@@ -83,8 +94,9 @@ export default class HelloWorldSceneAR extends Component {
             scale={this.state.scale2}
             type="VRX"
             onClick={() => this.setState({
-              scale2: [0, 0, 0]
-            })}
+              scale2: [0, 0, 0],
+              counter: counter + 1
+            }), _checkCounter()}
             animation={{name: "anim2", run: true, loop: true}} />
         </ViroNode>
 
@@ -98,8 +110,9 @@ export default class HelloWorldSceneAR extends Component {
             scale={this.state.scale3}
             type="VRX"
             onClick={() => this.setState({
-              scale3: [0, 0, 0]
-            })}
+              scale3: [0, 0, 0],
+              counter: counter + 1
+            }), _checkCounter()}
             animation={{name: "anim3", run: true, loop: true}} />
         </ViroNode>
 
@@ -113,8 +126,9 @@ export default class HelloWorldSceneAR extends Component {
             scale={this.state.scale4}
             type="VRX"
             onClick={() => this.setState({
-              scale4: [0, 0, 0]
-            })}
+              scale4: [0, 0, 0],
+              counter: counter + 1
+            }), _checkCounter()}
             animation={{name: "anim4", run: true, loop: true}} />
         </ViroNode>
 
@@ -128,8 +142,9 @@ export default class HelloWorldSceneAR extends Component {
             scale={this.state.scale5}
             type="VRX"
             onClick={() => this.setState({
-              scale5: [0, 0, 0]
-            })}
+              scale5: [0, 0, 0],
+              counter: counter + 1
+            }), _checkCounter()}
             animation={{name: "anim1", run: true, loop: true}} />
         </ViroNode>
 
@@ -143,8 +158,9 @@ export default class HelloWorldSceneAR extends Component {
             scale={this.state.scale6}
             type="VRX"
             onClick={() => this.setState({
-              scale6: [0, 0, 0]
-            })}
+              scale6: [0, 0, 0],
+              counter: counter + 1
+            }), _checkCounter()}
             animation={{name: "anim2", run: true, loop: true}} />
         </ViroNode>
 
@@ -158,8 +174,9 @@ export default class HelloWorldSceneAR extends Component {
             scale={this.state.scale7}
             type="VRX"
             onClick={() => this.setState({
-              scale7: [0, 0, 0]
-            })}
+              scale7: [0, 0, 0],
+              counter: counter + 1
+            }), _checkCounter()}
             animation={{name: "anim3", run: true, loop: true}} />
         </ViroNode>
 
@@ -173,8 +190,9 @@ export default class HelloWorldSceneAR extends Component {
             scale={this.state.scale8}
             type="VRX"
             onClick={() => this.setState({
-              scale8: [0, 0, 0]
-            })}
+              scale8: [0, 0, 0],
+              counter: counter + 1
+            }), _checkCounter()}
             animation={{name: "anim4", run: true, loop: true}} />
         </ViroNode>
 
@@ -188,8 +206,9 @@ export default class HelloWorldSceneAR extends Component {
             scale={this.state.scale9}
             type="VRX"
             onClick={() => this.setState({
-              scale9: [0, 0, 0]
-            })}
+              scale9: [0, 0, 0],
+              counter: counter + 1
+            }), _checkCounter()}
             animation={{name: "anim1", run: true, loop: true}} />
         </ViroNode>
 
@@ -203,8 +222,9 @@ export default class HelloWorldSceneAR extends Component {
             scale={this.state.scale10}
             type="VRX"
             onClick={() => this.setState({
-              scale10: [0, 0, 0]
-            })}
+              scale10: [0, 0, 0],
+              counter: counter + 1
+            }), _checkCounter()}
             animation={{name: "anim2", run: true, loop: true}} />
         </ViroNode>
 
@@ -218,8 +238,9 @@ export default class HelloWorldSceneAR extends Component {
             scale={this.state.scale11}
             type="VRX"
             onClick={() => this.setState({
-              scale11: [0, 0, 0]
-            })}
+              scale11: [0, 0, 0],
+              counter: counter + 1
+            }), _checkCounter()}
             animation={{name: "anim3", run: true, loop: true}} />
         </ViroNode>
 
@@ -233,8 +254,9 @@ export default class HelloWorldSceneAR extends Component {
             scale={this.state.scale12}
             type="VRX"
             onClick={() => this.setState({
-              scale12: [0, 0, 0]
-            })}
+              scale12: [0, 0, 0],
+              counter: counter + 1
+            }), _checkCounter()}
             animation={{name: "anim4", run: true, loop: true}} />
         </ViroNode>
 
@@ -248,8 +270,9 @@ export default class HelloWorldSceneAR extends Component {
             scale={this.state.scale13}
             type="VRX"
             onClick={() => this.setState({
-              scale13: [0, 0, 0]
-            })}
+              scale13: [0, 0, 0],
+              counter: counter + 1
+            }), _checkCounter()}
             animation={{name: "anim1", run: true, loop: true}} />
         </ViroNode>
 
@@ -263,8 +286,9 @@ export default class HelloWorldSceneAR extends Component {
             scale={this.state.scale14}
             type="VRX"
             onClick={() => this.setState({
-              scale14: [0, 0, 0]
-            })}
+              scale14: [0, 0, 0],
+              counter: counter + 1
+            }), _checkCounter()}
             animation={{name: "anim2", run: true, loop: true}} />
         </ViroNode>
 
@@ -278,8 +302,9 @@ export default class HelloWorldSceneAR extends Component {
             scale={this.state.scale15}
             type="VRX"
             onClick={() => this.setState({
-              scale15: [0, 0, 0]
-            })}
+              scale15: [0, 0, 0],
+              counter: counter + 1
+            }), _checkCounter()}
             animation={{name: "anim3", run: true, loop: true}} />
         </ViroNode>
 
@@ -293,8 +318,137 @@ export default class HelloWorldSceneAR extends Component {
             scale={this.state.scale16}
             type="VRX"
             onClick={() => this.setState({
-              scale16: [0, 0, 0]
-            })}
+              scale16: [0, 0, 0],
+              counter: counter + 1
+            }), _checkCounter()}
+            animation={{name: "anim4", run: true, loop: true}} />
+        </ViroNode>
+
+        <ViroNode position={[-1,-1,-2]}>
+          <Viro3DObject
+            source={require('./res/emoji_smile/emoji_smile.vrx')}
+            resources={[require('./res/emoji_smile/emoji_smile_diffuse.png'),
+                require('./res/emoji_smile/emoji_smile_normal.png'),
+                require('./res/emoji_smile/emoji_smile_specular.png')]}
+            position={[0, 1, -1]}
+            scale={this.state.scale17}
+            type="VRX"
+            onClick={() => this.setState({
+              scale17: [0, 0, 0],
+              counter: counter + 1
+            }), _checkCounter()}
+            animation={{name: "anim4", run: true, loop: true}} />
+        </ViroNode>
+
+        <ViroNode position={[-1,-1,-2]}>
+          <Viro3DObject
+            source={require('./res/emoji_smile/emoji_smile.vrx')}
+            resources={[require('./res/emoji_smile/emoji_smile_diffuse.png'),
+                require('./res/emoji_smile/emoji_smile_normal.png'),
+                require('./res/emoji_smile/emoji_smile_specular.png')]}
+            position={[0, 1, -1]}
+            scale={this.state.scale18}
+            type="VRX"
+            onClick={() => this.setState({
+              scale18: [0, 0, 0],
+              counter: counter + 1
+            }), _checkCounter()}
+            animation={{name: "anim4", run: true, loop: true}} />
+        </ViroNode>
+
+        <ViroNode position={[-1,-1,-2]}>
+          <Viro3DObject
+            source={require('./res/emoji_smile/emoji_smile.vrx')}
+            resources={[require('./res/emoji_smile/emoji_smile_diffuse.png'),
+                require('./res/emoji_smile/emoji_smile_normal.png'),
+                require('./res/emoji_smile/emoji_smile_specular.png')]}
+            position={[0, 1, -1]}
+            scale={this.state.scale19}
+            type="VRX"
+            onClick={() => this.setState({
+              scale19: [0, 0, 0],
+              counter: counter + 1
+            }), _checkCounter()}
+            animation={{name: "anim4", run: true, loop: true}} />
+        </ViroNode>
+
+        <ViroNode position={[-1,-1,-2]}>
+          <Viro3DObject
+            source={require('./res/emoji_smile/emoji_smile.vrx')}
+            resources={[require('./res/emoji_smile/emoji_smile_diffuse.png'),
+                require('./res/emoji_smile/emoji_smile_normal.png'),
+                require('./res/emoji_smile/emoji_smile_specular.png')]}
+            position={[0, 1, -1]}
+            scale={this.state.scale20}
+            type="VRX"
+            onClick={() => this.setState({
+              scale20: [0, 0, 0],
+              counter: counter + 1
+            }), _checkCounter()}
+            animation={{name: "anim4", run: true, loop: true}} />
+        </ViroNode>
+
+        <ViroNode position={[-1,-1,-2]}>
+          <Viro3DObject
+            source={require('./res/emoji_smile/emoji_smile.vrx')}
+            resources={[require('./res/emoji_smile/emoji_smile_diffuse.png'),
+                require('./res/emoji_smile/emoji_smile_normal.png'),
+                require('./res/emoji_smile/emoji_smile_specular.png')]}
+            position={[0, 1, -1]}
+            scale={this.state.scale21}
+            type="VRX"
+            onClick={() => this.setState({
+              scale21: [0, 0, 0],
+              counter: counter + 1
+            }), _checkCounter()}
+            animation={{name: "anim4", run: true, loop: true}} />
+        </ViroNode>
+
+        <ViroNode position={[-1,-1,-2]}>
+          <Viro3DObject
+            source={require('./res/emoji_smile/emoji_smile.vrx')}
+            resources={[require('./res/emoji_smile/emoji_smile_diffuse.png'),
+                require('./res/emoji_smile/emoji_smile_normal.png'),
+                require('./res/emoji_smile/emoji_smile_specular.png')]}
+            position={[0, 1, -1]}
+            scale={this.state.scale22}
+            type="VRX"
+            onClick={() => this.setState({
+              scale22: [0, 0, 0],
+              counter: counter + 1
+            }), _checkCounter()}
+            animation={{name: "anim4", run: true, loop: true}} />
+        </ViroNode>
+
+        <ViroNode position={[-1,-1,-2]}>
+          <Viro3DObject
+            source={require('./res/emoji_smile/emoji_smile.vrx')}
+            resources={[require('./res/emoji_smile/emoji_smile_diffuse.png'),
+                require('./res/emoji_smile/emoji_smile_normal.png'),
+                require('./res/emoji_smile/emoji_smile_specular.png')]}
+            position={[0, 1, -1]}
+            scale={this.state.scale23}
+            type="VRX"
+            onClick={() => this.setState({
+              scale23: [0, 0, 0],
+              counter: counter + 1
+            }), _checkCounter()}
+            animation={{name: "anim4", run: true, loop: true}} />
+        </ViroNode>
+
+        <ViroNode position={[-1,-1,-2]}>
+          <Viro3DObject
+            source={require('./res/emoji_smile/emoji_smile.vrx')}
+            resources={[require('./res/emoji_smile/emoji_smile_diffuse.png'),
+                require('./res/emoji_smile/emoji_smile_normal.png'),
+                require('./res/emoji_smile/emoji_smile_specular.png')]}
+            position={[0, 1, -1]}
+            scale={this.state.scale24}
+            type="VRX"
+            onClick={() => this.setState({
+              scale24: [0, 0, 0],
+              counter: counter + 1
+            }), _checkCounter()}
             animation={{name: "anim4", run: true, loop: true}} />
         </ViroNode>
         
@@ -302,6 +456,14 @@ export default class HelloWorldSceneAR extends Component {
 
       
     );
+  }
+
+  _checkCounter() {
+    if (this.state.counter >= 24) {
+      this.setState({
+        textScale: [0.2, 0.2, 0.2]
+      });
+    }
   }
 
   _onInitialized(state, reason) {
@@ -319,7 +481,7 @@ export default class HelloWorldSceneAR extends Component {
 var styles = StyleSheet.create({
   helloWorldTextStyle: {
     fontFamily: 'Arial',
-    fontSize: 30,
+    fontSize: 25,
     color: '#ffffff',
     textAlignVertical: 'center',
     textAlign: 'center',
