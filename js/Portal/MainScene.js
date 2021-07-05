@@ -35,7 +35,7 @@ var MainScene = createReactClass({
               type="VRX"
             />
           </ViroPortal>
-          <Viro360Image source={require('../../js/res/3d-pic.jpg')} />
+          <Viro360Image source={require('.res/3d-pic.jpg')} />
           {/* <Viro360Video source={require("../../js/res/360_surf.mp4")} onFinish={this._onFinish}
     onUpdateTime={this._onUpdateTime}
     onError={this._videoError}
