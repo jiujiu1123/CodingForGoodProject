@@ -25,7 +25,7 @@ var MainScene = createReactClass({
       <ViroARScene>
       <ViroAmbientLight color="#ffffff" intensity={200}/>
         <ViroPortalScene passable={true} dragType="FixedDistance" onDrag={()=>{}}>
-          <ViroPortal position={[0, 0, -1]} scale={[.1, .1, .1]}>
+          <ViroPortal position={[0, 0, -1]} scale={[.4, .3, .4]}>
             <Viro3DObject source={require('./res/portals/portal_wood_frame.vrx')}
               resources={[
                 require('./res/portals/portal_wood_frame_diffuse.png'),
