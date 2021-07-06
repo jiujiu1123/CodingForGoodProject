@@ -32,21 +32,23 @@ export default function Main ({navigation})
         </View>
 
         <View style={styles.viewStyle}>
+        <Screen6/>
+        </View>
+
+        <View style={styles.viewStyle}>
 
         <View style={{marginTop:'auto',marginBottom:'auto'}}>
        
         <Button text="Portal View" change={()=>{navigation.navigate('AR',{name:"PortalPicture"})}} c/>
-        <Button text="Hunt Smileys" change={ ()=>{ navigation.navigate('AR',{name:"Bubbles"})}} />
+        <Button text="Hunt Smileys" change={ ()=>{alert("hunt the smileys"); navigation.navigate('AR',{name:"Bubbles"})}} />
         <Button text="Portal Video" change={()=>{navigation.navigate('AR',{name:"PortalVideo"})}} />
         <Button text="Launch Your Rocket "  change={()=>{navigation.navigate('AR',{name:"Rocket"})}} />
-        <Button text="Meet the Team" change={()=>{navigation.navigate('AR',{name:"Contact"})}} />
+        <Button text="Meet the Team" change={()=>{alert("Scan the Code Your Chances Logo!"); navigation.navigate('AR',{name:"Contact"})}} />
     
       </View>
       </View>
       
-      <View style={styles.viewStyle}>
-      <Screen6/>
-      </View>
+      
      
       </ScrollView>
       </View>}
