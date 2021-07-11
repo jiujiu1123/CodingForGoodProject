@@ -35,12 +35,13 @@ export default function Main ({navigation})
 
         <View style={{marginTop:'auto',marginBottom:'auto'}}>
        
-        <Button text="Portal View" change={()=>{navigation.navigate('AR',{name:"PortalPicture"})}} c/>
-        <Button text="Hunt Smileys" change={ ()=>{ navigation.navigate('AR',{name:"Bubbles"})}} />
-        <Button text="Portal Video" change={()=>{navigation.navigate('AR',{name:"PortalVideo"})}} />
+        <Button text="Portal View" change={()=>{alert("Walk into the portal !! "); navigation.navigate('AR',{name:"PortalPicture"})}} c/>
+        <Button text="Hunt Smileys" change={ ()=>{alert("Look for the smileys and tap on them"); navigation.navigate('AR',{name:"Bubbles"})}} />
+        <Button text="Portal Video" change={()=>{alert("Walk into the portal !! "); navigation.navigate('AR',{name:"PortalVideo"})}} />
         <Button text="Launch Your Rocket "  change={()=>{navigation.navigate('AR',{name:"Rocket"})}} />
-        <Button text="Meet the Team" change={()=>{navigation.navigate('AR',{name:"Contact"})}} />
+        <Button text="Meet the Team" change={()=>{alert("Scan the Code Your Chances Logo!"); navigation.navigate('AR',{name:"Contact"})}} />
     
+ 
       </View>
       </View>
       
