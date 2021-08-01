@@ -59,11 +59,14 @@ const styles = StyleSheet.create({
       justifyContent: "center",
       alignItems: "center",
       backgroundColor: "#e5e5e5",
+      height: deviceHeight,
     },
    viewStyle:{
     width: deviceWidth,
+    height: deviceHeight,
     backgroundColor: '#FFFFFF',
-    flexDirection: 'column'} 
+    flexDirection: 'column'},
+
    });
   
   
