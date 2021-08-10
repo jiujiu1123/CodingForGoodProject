@@ -2,7 +2,7 @@
 
 Installation requirements : nodejs [https://nodejs.org/en/], Xcode, Read through https://reactnative.dev/docs/environment-setup and install accordingly.
 
-1. Run `git clone https://github.com/ViroCommunity/starter-kit.git`
+1. Run `git clone https://github.com/Annamaneni7/CodingForGoodProject.git`
 2. `cd starter-kit`
 3. `npm install`
 4. `cd ios && pod install` (iOS)
