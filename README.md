@@ -3,12 +3,11 @@
 Installation requirements : nodejs [https://nodejs.org/en/], Xcode, Read through https://reactnative.dev/docs/environment-setup and install accordingly.
 
 1. Run `git clone https://github.com/Annamaneni7/CodingForGoodProject.git`
-2. `cd starter-kit`
-3. `npm install`
-4. `cd ios && pod install` (iOS)
-5. `pod update'
+2. `npm install`
+3. `cd ios && pod install` (iOS)
+4. `pod update'
 
-6. Follow https://reactnative.dev/docs/running-on-device to run it on your ios/android device.
+5. Follow https://reactnative.dev/docs/running-on-device to run it on your ios/android device.
 
 NOTE: If attempting to run on your IOS device using Xcode, there are high chances you might run into errors. If the error is something on the lines of "name not available", you need to rename the whole project. I highly recommend renaming the entire project to something unique before you attempt to run this on your IOS device.
 
