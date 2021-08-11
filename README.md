@@ -13,6 +13,8 @@ NOTE: If attempting to run on your IOS device using Xcode, there are high chance
 
 Here are the steps to rename the entire project folder:
 
+Current name of the project: NewProject12345
+
 1. Close Xcode.
 
 2. Go to your /ProjectFolder.
@@ -26,7 +28,7 @@ Here are the steps to rename the entire project folder:
    This step renames the files and directories containing the source string. You’ll need to run this command twice, because directories will be renamed first, then files and directories inside those will be renamed on the next iteration.
 
   
-7. To Check if all the files containing the source string are renamed, run the command below. You should see empty output.
+7. To Check if all the files containing the source string are renamed, run the command below. You should see empty output. 
 
   find . -name 'oldName*'
 
