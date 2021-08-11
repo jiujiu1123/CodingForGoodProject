@@ -1,53 +1,67 @@
-import React from 'react';
+import React, { useRef } from 'react'
 import {
   ScrollView,
   StyleSheet,
   View,
-  Dimensions
+  Dimensions,
+  Alert,
+  TouchableOpacity,
+  Text
 } from 'react-native';
 
 import Button from './Button'
 import Screen2 from './Screen2'
 import Screen3 from './Screen3'
 import Screen4 from './Screen4'
-import Screen6 from './Screen6'
+import Screen5 from './Screen5'
+import Next from './Next';
 
 var deviceWidth = Dimensions.get('window').width;
 var deviceHeight = Dimensions.get('window').height;
 
+
 export default function Main ({navigation})
-{return <View style={styles.container}>
-        <ScrollView horizontal={true} pagingEnabled={true} showsHorizontalScrollIndicator={false}>
+{const scroll = useRef(null);
+
+  
+  return <View style={styles.container}>
+        <ScrollView ref={scroll} scrollEnabled={false}
+ alwaysBounceHorizontal={false} bounces={false} horizontal={true} >
        
         <View style={styles.viewStyle}>
-        <Screen2/>
+        <Screen2 scroll={scroll} />
         </View>
         
         <View style={styles.viewStyle}>
-        <Screen3/>
+        <Screen3 scroll={scroll} />
         </View>
         
         <View style={styles.viewStyle}>
-        <Screen4/>
+        <Screen4 scroll={scroll} />
         </View>
+
+        <View style={styles.viewStyle}>
+      <Screen5 scroll={scroll} />
+      </View>
 
         <View style={styles.viewStyle}>
 
         <View style={{marginTop:'auto',marginBottom:'auto'}}>
        
-        <Button text="Portal View" change={()=>{alert("Walk into the portal !! "); navigation.navigate('AR',{name:"PortalPicture"})}} c/>
-        <Button text="Hunt Smileys" change={ ()=>{alert("Look for the smileys and tap on them"); navigation.navigate('AR',{name:"Bubbles"})}} />
-        <Button text="Portal Video" change={()=>{alert("Walk into the portal !! "); navigation.navigate('AR',{name:"PortalVideo"})}} />
-        <Button text="Launch Your Rocket "  change={()=>{navigation.navigate('AR',{name:"Rocket"})}} />
-        <Button text="Meet the Team" change={()=>{alert("Scan the Code Your Chances Logo!"); navigation.navigate('AR',{name:"Contact"})}} />
-    
+        <Button text="Portal View" change={()=>{Alert.alert("Clue", "Find the magical portal and try to walk into and out of it");navigation.navigate('AR',{name:"PortalPicture"})}} c/>
+        <Button text="Hunt Smileys" change={ ()=>{Alert.alert("Clue", "Look for the smileys and tap on as many as you can"); navigation.navigate('AR',{name:"Bubbles"})}} />
+        <Button text="Portal Video" change={()=>{Alert.alert("Clue", "Find the magical portal and try to walk into and out of it"); navigation.navigate('AR',{name:"PortalVideo"})}} />
+        <Button text="Launch Your Rocket "  change={()=>{Alert.alert("Clue", "Find and follow the instructions to launch your Rocket");navigation.navigate('AR',{name:"Rocket"})}} />
+        <Button text="Meet the Team" change={()=>{Alert.alert("Clue", "Scan the logo on https://www.codeyourchances.com/ to e-meet the team"); navigation.navigate('AR',{name:"Contact"})}} />
+   
+        <TouchableOpacity style={{marginLeft:"auto",marginRight:"auto",padding:10,backgroundColor: "#F38C1D",borderRadius:5,marginTop:'15%',marginBottom:'5%'}} onPress={(e) =>{  scroll.current?.scrollTo({x: deviceWidth*3, y: 0, animated: true})}}>
+                    <Text style={{fontSize:20,backgroundColor:"#F38C1D",borderRadius:50,color:'white'}}> Go back </Text>
+              </TouchableOpacity>
  
       </View>
       </View>
       
-      <View style={styles.viewStyle}>
-      <Screen6/>
-      </View>
+     
      
       </ScrollView>
       </View>}

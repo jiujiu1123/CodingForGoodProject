@@ -26,11 +26,14 @@ var PortalVideo = createReactClass({
       <ViroAmbientLight color="#ffffff" intensity={200}/>
         <ViroPortalScene passable={true} dragType="FixedDistance" onDrag={()=>{}}>
           <ViroPortal position={[0, 0, -1]} scale={[.1, .1, .1]}>
-            <Viro3DObject source={require('./portal_ship/portal_ship.vrx')}
-              resources={[require('./portal_ship/portal_ship_diffuse.png'),
-                          require('./portal_ship/portal_ship_normal.png'),
-                          require('./portal_ship/portal_ship_specular.png')]}
-              type="VRX"/>
+          <Viro3DObject source={require('../res/portals/portal_wood_frame.vrx')}
+              resources={[
+                require('../res/portals/portal_wood_frame_diffuse.png'),
+                require('../res/portals/portal_wood_frame_normal.png'),
+                require('../res/portals/portal_wood_frame_specular.png'),
+              ]}
+              type="VRX"
+            />
           </ViroPortal>
           <Viro360Video source={require("./360_surf.mp4")} loop={true} />   
        </ViroPortalScene>
