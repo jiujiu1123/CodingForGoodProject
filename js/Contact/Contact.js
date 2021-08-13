@@ -100,13 +100,8 @@ var list=[
 
 function Card(props){
   const i=props.i;
-  return  <ViroNode key={i}
-  opacity={0} position={[0, 0.02, 0]}
-  animation={{
-    name:props.item.animation,
-    run: props.runAnimation
-    }}
->   
+  return  <ViroNode key={i} opacity={0} position={[0, 0.02, 0]}
+  animation={{name:props.item.animation,run: props.runAnimation }}>   
   <ViroFlexView
       rotation={[-90, 0, 0]}
       height={0.03}
@@ -130,7 +125,7 @@ function Card(props){
       />
     </ViroFlexView>
     <ViroFlexView
-      onTouch={() => alert("twitter")}
+      onTouch={() => alert("mistake")}
       style={styles.subText}
     >
  
@@ -163,7 +158,7 @@ export class Contact extends Component {
   getARScene() {
     return (
       <ViroNode>
-        <ViroARImageMarker target={"businessCard"}
+        <ViroARImageMarker target={"contact"}
           onAnchorFound={ 
             () => this.setState({
                 runAnimation: true
@@ -254,8 +249,8 @@ helloWorldTextStyle: {
 });
 
 ViroARTrackingTargets.createTargets({
-  "businessCard" : {
-    source : require('./res/cyc.png'),
+  "contact" : {
+    source : require('./res/cyclogo.png'),
     orientation : "Up",
     physicalWidth : 0.05 // real world width in meters
   }

@@ -2,17 +2,18 @@
 
 Installation requirements : nodejs [https://nodejs.org/en/], Xcode, Read through https://reactnative.dev/docs/environment-setup and install accordingly.
 
-1. Run `git clone https://github.com/ViroCommunity/starter-kit.git`
-2. `cd starter-kit`
-3. `npm install`
-4. `cd ios && pod install` (iOS)
-5. `pod update'
+1. Run `git clone https://github.com/Annamaneni7/CodingForGoodProject.git`
+2. `npm install`
+3. `cd ios && pod install` (iOS)
+4. `pod update'
 
-6. Follow https://reactnative.dev/docs/running-on-device to run it on your ios/android device.
+5. Follow https://reactnative.dev/docs/running-on-device to run it on your ios/android device.
 
 NOTE: If attempting to run on your IOS device using Xcode, there are high chances you might run into errors. If the error is something on the lines of "name not available", you need to rename the whole project. I highly recommend renaming the entire project to something unique before you attempt to run this on your IOS device.
 
 Here are the steps to rename the entire project folder:
+
+Current name of the project: NewProject12345
 
 1. Close Xcode.
 
@@ -27,7 +28,7 @@ Here are the steps to rename the entire project folder:
    This step renames the files and directories containing the source string. You’ll need to run this command twice, because directories will be renamed first, then files and directories inside those will be renamed on the next iteration.
 
   
-7. To Check if all the files containing the source string are renamed, run the command below. You should see empty output.
+7. To Check if all the files containing the source string are renamed, run the command below. You should see empty output. 
 
   find . -name 'oldName*'
 
